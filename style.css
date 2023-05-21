@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    background-color: rgb(56, 56, 56);
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+.main {
+    height: 62px;
+    background-color: rgb(102, 102, 102);
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    box-shadow: 0 0 7px #222222;
+}
+
+.li-items {
+    height: 62px;
+    margin-right: 5rem;
+}
+
+.logo h1 {
+    margin: 0;
+    margin: 2rem 0 0 1rem;
+}
+
+ul li {
+    display: inline-block;
+    padding: .6rem 4rem;
+}
+
+li a {
+    text-decoration: none;
+    color: #f6f4f4;
+    display: inline-block;
+    font-weight: bold;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    bottom: -5px;
+    width: 50%;
+    border-bottom: 3px solid #373737;
+    transform: translateX(50%) scaleX(0);
+    transition: 0.3s ease-in-out;
+}
+
+li a:hover::after {
+    transform: translateX(50%) scaleX(1);
+}
+
+li a:hover {
+    color: #fff;
+}
+
+
+/* Section styles */
+section {
+    margin: 0 1rem 0 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.heading {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+.content {
+    font-size: 1.4rem;
+    color: #8f8f8f;
+}
+
+.arrow {
+    color: #202020;
+}
+
+@media screen and (max-width:978px) {
+    ul li {
+        padding: .7rem 3rem;
+    }
+}
+
+/* Stylish for small screen such as tab,mobiles */
+@media screen and (max-width: 727px) {
+    .main {
+        display: inline-block;
+    }
+
+    ul li {
+        display: block;
+    }
+
+    .li-items {
+        margin: 0;
+        display: none;
+        background-color: #191919;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        bottom: 1rem;
+    }
+
+    .nav-icon {
+        background: url("./nav-icons/bars-solid.svg") no-repeat;
+        display: inline-flex;
+        width: 30px;
+        height: 2rem;
+        filter: brightness(0) invert(1);
+        float: right;
+        position: relative;
+        bottom: 2.6rem;
+        right: 10px;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    .logo h1 {
+        text-align: center;
+    }
+
+    li a {
+        padding: 10px;
+        font-size: 1.4rem;
+    }
+
+    li {
+        text-align: center;
+    }
+
+    .show {
+        display: block;
+        height: 0px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .disabled {
+        pointer-events: none;
+        filter: sepia(100%) hue-rotate(30deg) saturate(200%);
+
+    }
+
+    a::after {
+        bottom: 5px;
+        border: red 1px solid;
+    }
+}
